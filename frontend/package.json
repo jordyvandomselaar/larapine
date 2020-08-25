@@ -1,0 +1,40 @@
+{
+  "name": "larapine",
+  "version": "0.0.0",
+  "description": "Helping you integrate AlpineJS with Laravel",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "preversion": "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordyvandomselaar/larapine.git"
+  },
+  "keywords": [
+    "Laravel",
+    "AlpineJS"
+  ],
+  "author": "Jordy <jordy.m.van.domselaar@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jordyvandomselaar/larapine/issues"
+  },
+  "homepage": "https://github.com/jordyvandomselaar/larapine#readme",
+  "devDependencies": {
+    "prettier": "^2.1.0",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.0.2"
+  }
+}
